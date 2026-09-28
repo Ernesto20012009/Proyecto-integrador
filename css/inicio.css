@@ -1,0 +1,110 @@
+.header {
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--bg-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Desktop */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  font-weight: 400;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Estilo destacado según la pantalla */
+.nav-link--active {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.nav-link--active:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Estilo de botón para "Mi perfil" */
+.nav-link--btn {
+  background-color: #eaf5ff;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.nav-link--btn:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Botón Hamburguesa (oculto en pantallas grandes) */
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/*responsive */
+@media screen and (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%; /* Oculto fuera de la pantalla a la derecha */
+    width: 80%;
+    max-width: 320px;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--bg-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 1.2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.08);
+    transition: right 0.3s ease-in-out;
+  }
+
+  /* Clase que activa la visibilidad del menú al hacer click */
+  .nav-menu.show-menu {
+    right: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 0.8rem 1rem;
+  }
+}
