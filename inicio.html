@@ -14,6 +14,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--Bootstrap iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <a href="acercade.html"></a>
 </head>
 
 <body>
@@ -26,6 +27,23 @@
         <img src="IMAGE/logo.png" alt="Logo LUDUS" class="brand-logo-img">
         <span>LUDUS</span>
       </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href=“#inicio” class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href=“#juegosDestacados” class="nav-link">Juegos Destacados</a>
+                </li>
+                <li class="nav-item">
+                    <a href=“contactanos class="nav-link">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="acercade.html" class="nav-link">Acerca de nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href=“#miPerfil” class="nav-link">Mi perfil</a>
+                </li>
+            </ul>
 
       <!-- BOTÓN RESPONSIVO PARA MÓVILES -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,7 +130,250 @@
         <div id="container-juegos-destacados" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4"></div>
 
     </section>
-    
+
+
+    <!--Reseñas Recientes-->
+    <section id="resenas-recientes">
+
+ <!---   <article class="card">
+    <h2>Elden Ring</h2>
+    <p>Una obra maestra del género soulslike.</p>
+  </article>
+
+  <article class="card">
+    <h2>Baldurs Gate 3</h2>
+    <p>Cada area es un descubrimiento nuevo.</p>
+  </article>
+
+  <article class="card">
+    <h2>Zelda:TotK</h2>
+    <p>La construcción transforma la experiencia.</p>
+  </article>
+
+  <article class="card">
+    <h2>Gran turismo</h2>
+    <p>La simulacion es su fuerte .</p>
+  </article>--->
+
+  <!-- Tarjeta 1 -->
+  <article class="card">
+    <div class="card-header header-red">
+      <div class="avatar">IS</div>
+    </div>
+    <div class="card-body">
+      <span class="top-tag">Nuevo usuario</span> <!-- Texto por encima/al inicio del perfil -->
+      <h3 class="card-name">Isaac Snyder</h3>
+      <p class="card-title">IT Supervisor at XYZ Company</p>
+      <span class="mutual-connections">10 mutual connections</span>
+      <button class="btn-invite">Invite Now</button>
+    </div>
+  </article>
+
+  <!-- Tarjeta 2 -->
+  <article class="card">
+    <div class="card-header header-pink">
+      <div class="avatar">DH</div>
+    </div>
+    <div class="card-body">
+      <span class="top-tag">Sugerido</span>
+      <h3 class="card-name">Darrell Holland</h3>
+      <p class="card-title">Software Developer at XYZ Company</p>
+      <span class="mutual-connections">5 mutual connections</span>
+      <button class="btn-invite">Invite Now</button>
+    </div>
+  </article>
+
+  <!-- Tarjeta 3 -->
+  <article class="card">
+    <div class="card-header header-purple">
+      <div class="avatar">AB</div>
+    </div>
+    <div class="card-body">
+      <span class="top-tag">Destacado</span>
+      <h3 class="card-name">Abigail Black</h3>
+      <p class="card-title">Team lead/Developer at XYZ Company</p>
+      <span class="mutual-connections">5 mutual connections</span>
+      <button class="btn-invite">Invite Now</button>
+    </div>
+  </article>
+
+  <!-- Tarjeta 4 -->
+  <article class="card">
+    <div class="card-header header-teal">
+      <img src="ruta-de-la-foto.jpg" alt="Shrawan Shrestha" class="avatar-img">
+    </div>
+    <div class="card-body">
+      <span class="top-tag">Popular</span>
+      <h3 class="card-name">Shrawan Shrestha</h3>
+      <p class="card-title">Design lead/Sr. Frontend Developer at XYZ...</p>
+      <span class="mutual-connections">115 mutual connections</span>
+      <button class="btn-invite">Invite Now</button>
+    </div>
+  </article>
+
+    </section>
+
+     <!--- Contactanos --->
+    <section>
+        <section id="contacto" class="container py-5">
+
+            <h2 class="text-center mb-4">Contáctanos</h2>
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-8">
+
+                    <form id="formularioContacto">
+
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">
+                                Nombre
+                            </label>
+
+                            <input type="text" class="form-control" id="nombre" name="nombre"
+                                placeholder="Escribe tu nombre">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">
+                                Correo electrónico
+                            </label>
+
+                            <input type="email" class="form-control" id="correo" name="correo"
+                                placeholder="ejemplo@gmail.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">
+                                Mensaje
+                            </label>
+
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
+                                placeholder="Escribe tu mensaje"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Enviar mensaje
+                        </button>
+
+                    </form>
+
+                    <div id="mensajeEstado" class="mt-3"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </section>
+
+    <!--- Footer --->>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Información del proyecto -->
+                <div class="col-12 col-md-5 mb-5">
+
+                    <h5 class="fw-bold">LUDUS</h5>
+
+                    <p class="text-secondary">
+                        Descubre nuevos videojuegos, comparte tus opiniones
+                        y conoce las reseñas de otros jugadores.
+                    </p>
+
+                </div>
+
+                <!-- Navegación -->
+                <div class="col-12 col-md-2 mb-2">
+
+                    <h5 class="fw-bold">Navegación</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+                            <a href="#inicio" class="text-white text-decoration-none">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#juegosDestacados" class="text-white text-decoration-none">
+                                Juegos destacados
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#reseñas-recientes" class="text-white text-decoration-none">
+                                Reseñas recientes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contacto" class="text-white text-decoration-none">
+                                Contáctanos
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="col-12 col-md-5 mb-6">
+
+                    <h5 class="fw-bold">Síguenos</h5>
+
+                    <p class="text-secondary">
+                        Mantente al día con las novedades de nuestra comunidad.
+                    </p>
+
+                    <div class="d-flex gap-3">
+
+                        <div class="d-flex gap-3">
+
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/" class="text-white fs-4" target="_blank">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/" class="text-white fs-4" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+
+                            <!-- X / Twitter -->
+                            <a href="https://x.com/" class="text-white fs-4" target="_blank">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr class="border-secondary">
+
+                <div class="text-center text-secondary">
+
+                    <small>
+                        © LUDUS. Todos los derechos reservados.
+                    </small>
+
+                </div>
+
+            </div>
+
+    </footer>
+
+
+
+     <!--EmailJS-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!--Script juegosDestacados.js-->
     <script src="./JS/juegosDestacados.js"> </script>
     <!--Script email.js-->
