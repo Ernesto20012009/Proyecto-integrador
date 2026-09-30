@@ -1,37 +1,35 @@
-//arreglo para los juegos destacados
+// arreglo para los juegos destacados
 const juegosDestacados = [
-    {//juego destacado 1
-        id: 1,
-        imagen:"./IMAGE/eldenring.jpg",
-        nombre: "Elden Ring",
-        categoria: "RPG",
-        consola : "PC/PS5/XBOX",
-    },
-    // juego destacado 2
-    {
-        id: 2,
-        imagen:"./IMAGE/baldurs.jpg",
-        nombre: "Baldur's Gate 3",
-        categoria: "RPG",
-        consola : "PC/PS5",
-    },
-
-    {//juego destacado 3
-        id: 3,
-        imagen:"./IMAGE/",
-        nombre: "God of War Ragnarok",
-        categoria: "Accion",
-        consola : "PS5/PS4",
-    },
-
-    {// juego destacado 4
-        id: 4,
-        imagen:"./IMAGE/",
-        nombre: "Zelda BofTWfh",
-        categoria: "RPG",
-        consola : "Nintendo Switch",
-    },
+  { // juego destacado 1
+    id: 1,
+    imagen: "./IMAGE/juegos/eldenring.jpg",
+    nombre: "Elden Ring",
+    categoria: "RPG",
+    consola: "PC/PS5/XBOX",
+  },
+  { // juego destacado 2
+    id: 2,
+    imagen: "./IMAGE/juegos/baldurs.jpg",
+    nombre: "Baldur's Gate 3",
+    categoria: "RPG",
+    consola: "PC/PS5",
+  },
+  { // juego destacado 3
+    id: 3,
+    imagen: "./IMAGE/juegos/ragnarok.jpg",
+    nombre: "God of War Ragnarok",
+    categoria: "Accion",
+    consola: "PS5/PS4",
+  },
+  { // juego destacado 4
+    id: 4,
+    imagen: "./IMAGE/juegos/zelda.jpg",
+    nombre: "Zelda BofTWfh",
+    categoria: "RPG",
+    consola: "Nintendo Switch",
+  },
 ];
+
 const imagenesRespaldo = "";
 
 // Imagen gris
@@ -53,9 +51,9 @@ function cargarJuegosDestacados() {
     const col = document.createElement("div");
     col.classList.add("col");
 
-    // Estructura interna de la imagen
+    // Estructura interna de la tarjeta adaptable a temas oscuro claro
     col.innerHTML = `
-      <div class="card h-100 border-0 shadow-sm rounded-3">
+      <div class="card h-100 border-0 shadow-sm rounded-3 bg-body-tertiary">
         <!-- Imagen superior del juego -->
         <div class="p-2">
           <img 
@@ -68,13 +66,13 @@ function cargarJuegosDestacados() {
         
         <!-- Detalles del juego -->
         <div class="card-body pt-1 pb-3 px-3 d-flex flex-column justify-content-end">
-          <p class="card-title text-dark mb-1 fw-normal" style="font-size: 0.95rem;">
+          <p class="card-title text-body mb-1 fw-normal" style="font-size: 0.95rem;">
             ${juego.nombre}
           </p>
-          <p class="card-text fw-bold text-dark mb-1" style="font-size: 0.9rem;">
+          <p class="card-text fw-bold text-body mb-1" style="font-size: 0.9rem;">
             ${juego.categoria}
           </p>
-          <p class="card-text text-muted mb-0" style="font-size: 0.8rem; font-weight: 500;">
+          <p class="card-text text-body-secondary mb-0" style="font-size: 0.8rem; font-weight: 500;">
             ${juego.consola}
           </p>
         </div>
@@ -83,9 +81,7 @@ function cargarJuegosDestacados() {
 
     contenedor.appendChild(col);
   });
-}// fin cargarJuegosDestacados
+} // fin cargarJuegosDestacados
 
 // Cargar al iniciar la página
 document.addEventListener("DOMContentLoaded", cargarJuegosDestacados);
-
-

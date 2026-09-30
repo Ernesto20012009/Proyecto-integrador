@@ -1,3 +1,4 @@
+/*Barra de navegacion (NAVBAR)*/
 .brand-ludus {
       color: #0099ff;
       font-weight: 800;
@@ -12,14 +13,14 @@
       object-fit: contain;
     }
 
-    .nav-custom {
-      background-color: #ffffff;
+    .css-custom {
+      background-color: var(--bs-body-bg);
       padding-top: 0.8rem;
       padding-bottom: 0.8rem;
     }
 
-    .nav-custom .nav-link {
-      color: #333333;
+    .csscustom .nav-link {
+      color: var(--bs-body-bg);
       font-weight: 500;
       padding: 0.5rem 1rem !important;
     }
@@ -29,6 +30,7 @@
     }
 
     /* Botón azul activo para Contáctanos */
+    .nav-custom .nav-link-active,
     .nav-custom .nav-link-active {
       background-color: #0099ff !important;
       color: #ffffff !important;
@@ -51,17 +53,27 @@
       color: #ffffff;
     }
 
-    /*Estilo Reseñas*/
+    /*Estilo Reseñas
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+  */
+  /*ESTILOS GENERALES Y SECCION DE RESENIAS*/
 
+
+/*Fondo de la pagina*/
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #d1e3d7; 
-  padding: 40px 20px;
+  background-color: var(--bs-tertiary-bg); /*Fondo adaptable*/ 
+  color: var(--bs-tertiary-bg);
+  padding: 0px;
+  margin: 0px;
+}
+/* Todos los títulos y etiquetas de formularios */
+h1, h2, h3, h4, h5, h6, .form-label {
+  color: var(--bs-body-color) !important;
 }
 
 /* Contenedor principal: 4 columnas en 1 sola fila */
@@ -71,24 +83,27 @@ body {
   gap: 16px;                              
   width: 100%;
   max-width: 1100px;                      
-  margin: 0 auto;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* Estructura base de la tarjeta */
-.card {
-  background-color: #ffffff;
+/* Estructura base de la tarjeta sin romper Bootstrap */
+.tarjetas-container .card {
+  background-color: var(--bs-body-bg); /* Adapta el fondo al modo claro u oscuro */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   position: relative;
+  border: none;
 }
 
 /* Cabecera de color superior */
 .card-header {
   height: 60px;
   position: relative;
+  border: none;
 }
 
 .header-red { background-color: #f78c80; }
@@ -123,7 +138,7 @@ body {
 .header-purple .avatar { background-color: #8e24aa; }
 
 /* Contenido de la tarjeta */
-.card-body {
+.tarjetas-container .card-body {
   padding: 28px 16px 20px 16px;
   display: flex;
   flex-direction: column;
@@ -145,7 +160,7 @@ body {
   margin-bottom: 4px;
 }
 
-.card-title {
+.tarjetas-container .card-title {
   font-size: 0.78rem;
   color: #666666;
   line-height: 1.3;
@@ -172,4 +187,58 @@ body {
 .btn-invite:hover {
   background-color: #f5f5f5;
   border-color: #999999;
+}
+
+/* Tarjetas de Juegos Destacados y Reseñas */
+.card {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+}
+
+.card-title, .card-name, .card-body, .card p, .card span {
+  color: var(--bs-body-color);
+}
+
+/* Subtítulos, géneros y plataformas en las tarjetas */
+.text-muted, .card .text-muted, .small {
+  color: var(--bs-secondary-color) !important;
+}
+
+/* Campos del Formulario de Contacto */
+.form-control {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+}
+
+.form-control:focus {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* Marcadores de posición (placeholders) */
+.form-control::placeholder {
+  color: var(--bs-secondary-color);
+  opacity: 0.7;
+}
+
+
+
+/* Corregir el menú desplegable móvil para que se adapte al modo oscuro */
+.navbar-collapse {
+  background-color: var(--bs-body-bg) !important;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Forzar que el botón de cambiar tema sea 100% visible siempre */
+#theme-toggle {
+  color: var(--bs-body-color) !important;
+  border-color: var(--bs-border-color) !important;
+  background-color: var(--bs-body-bg) !important;
+}
+
+#theme-toggle:hover {
+  background-color: var(--bs-tertiary-bg) !important;
 }

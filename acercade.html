@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de</title>
-    <!--CSS ACERCA DE-->
-    <link rel="stylesheet" href="./css/acercade.css">
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!--Bootsrai Ico-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <a href="inicio.html"></a>
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="./css/acercade.css">
 </head>
 
 <body>
- <!-- BARRA DE NAVEGACIÓN -->
+  <!-- BARRA DE NAVEGACIÓN -->
   <nav class="navbar navbar-expand-lg nav-custom border-bottom">
     <div class="container-fluid px-lg-5">
 
-      <!-- LOGO y título-->
-    <a class="navbar-brand d-flex align-items-center gap-2 brand-ludus" href="#">
+      <!-- LOGO y título -->
+      <a class="navbar-brand d-flex align-items-center gap-2 brand-ludus" href="./inicio.html">
         <img src="IMAGE/logo.png" alt="Logo LUDUS" class="brand-logo-img">
         <span>LUDUS</span>
       </a>
@@ -31,54 +30,50 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- MENÚ Y CATEGORÍAS -->
+      <!-- MENÚ Y CATEGORÍAS CENTRADAS -->
       <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-2 id="nav-menu">
+        <ul class="navbar-nav mx-lg-auto text-center mb-2 mb-lg-0 gap-lg-2" id="nav-menu">
           <li class="nav-item">
-            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="./inicio.html" class="nav-link">Inicio</a>
           </li>
           <li class="nav-item">
-            <a href="#juegosDestacados" class="nav-link">Juegos Destacados</a>
+            <a href="./inicio.html#juegosDestacados" class="nav-link">Juegos Destacados</a>
           </li>
           <li class="nav-item">
-            <a href="#contactanos" class="nav-link nav-link-active">Contáctanos</a>
+            <a href="./inicio.html#contactanos" class="nav-link">Contáctanos</a>
           </li>
           <li class="nav-item">
-            <a href="acercade.html" class="nav-link">Acerca de nosotros</a>
+            <a href="acercade.html" class="nav-link nav-link-active">Acerca de nosotros</a>
           </li>
           <li class="nav-item">
             <a href="#miPerfil" class="nav-link">Mi perfil</a>
           </li>
         </ul>
 
-        <!-- BOTÓN DERECHO INICIAR SESIÓN -->
-        <div class="d-flex mt-3 mt-lg-0">
-          <button class="btn btn-login " type="button">Iniciar sesión</button>
+        <!-- BOTONES DERECHA: MODO OSCURO E INICIAR SESIÓN -->
+        <div class="d-flex align-items-center justify-content-center gap-2 mt-3 mt-lg-0">
+          <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" type="button">
+            🌙 Modo oscuro
+          </button>
+          <button class="btn btn-login" type="button">Iniciar sesión</button>
         </div>
       </div>
 
     </div>
-</nav>
+  </nav>
 
     <!-- Breve explicación de qué es LUDUS -->
     <section id="que-es-ludus">
-
         <div class="container p-4">
-
             <p class="text-center">ACERCA DE LUDUS</p>
             <h1 class="text-center">¡Somos gamers buscando crear comunidad!</h1>
-            <p class="text-center">Este proyecto nace en 2026, con un grupo de estudiantes de Generation México, buscando crear un espacio
-                seguro para que gamers compartan sus juegos favoritos</p>
-
+            <p class="text-center">Este proyecto nace en 2026, con un grupo de estudiantes de Generation México, buscando crear un espacio seguro para que gamers compartan sus juegos favoritos</p>
         </div>
-
     </section>
 
     <!-- Misión, visión y valores -->
     <section id="identidad" class="container">
-
         <div class="row row-cols-1 row-cols-lg-3 g-4">
-
             <div class="col">
                 <div id="mision" class="card border-0 shadow rounded-4 overflow-hidden h-100">
                     <div class="card-body p-4">
@@ -86,9 +81,7 @@
                             <i class="bi bi-bullseye fs-3"></i>
                         </div>
                         <h3>Misión</h3>
-                        <p>Ofrecer una plataforma transparente y accesible donde cualquier jugador pueda compartir su
-                            opinión sobre
-                            videojuegos de forma honesta y constructiva.</p>
+                        <p>Ofrecer una plataforma transparente y accesible donde cualquier jugador pueda compartir su opinión sobre videojuegos de forma honesta y constructiva.</p>
                     </div>
                 </div>
             </div>
@@ -100,9 +93,7 @@
                             <i class="bi bi-eye fs-3"></i>
                         </div>
                         <h3>Visión</h3>
-                        <p>Convertirnos en la referencia hispanoparlante de reseñas de videojuegos impulsadas por la
-                            comunidad,
-                            conectando a millones de jugadores.</p>
+                        <p>Convertirnos en la referencia hispanoparlante de reseñas de videojuegos impulsadas por la comunidad, conectando a millones de jugadores.</p>
                     </div>
                 </div>
             </div>
@@ -123,9 +114,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <!-- Integrantes del equipo -->
@@ -137,8 +126,7 @@
                 <!-- Alberto Benítez Anaya -->
                 <div class="col">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
-                        <img src="./IMAGE/fotosNosotros/albertano.png" class="card-img-top imagen-equipo"
-                            alt="Dante">
+                        <img src="./IMAGE/fotosNosotros/albertano.png" class="card-img-top imagen-equipo" alt="Alberto">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-center gap-3 mb-3">
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
@@ -146,7 +134,7 @@
                             </div>
                             <h3 class="card-title text-center">Alberto Benítez Anaya</h3>
                             <p class="text-center text-body-secondary">Desarrollador Full Stack</p>
-                            <p class="card-text">Graduado de filosofía. Enfocado en la funcionalidad y diseño de la navegación del proyecto.  </p>
+                            <p class="card-text">Graduado de filosofía. Enfocado en la funcionalidad y diseño de la navegación del proyecto.</p>
                         </div>
                     </div>
                 </div>
@@ -154,17 +142,15 @@
                 <!-- Angélica Peralta Avendaño -->
                 <div class="col">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
-                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo"
-                            alt="Dante">
+                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo" alt="Angélica">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-center gap-3 mb-3">
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                                 <a href="#"><i class="bi bi-github"></i></a>
                             </div>
                             <h3 class="card-title text-center">Angélica Peralta Avendaño</h3>
-                            <p class="text-center text-body-secondary">Desarrollador Full Stack</p>
-                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de
-                                funcionalidades y construcción de la plataforma.</p>
+                            <p class="text-center text-body-secondary">Desarrolladora Full Stack</p>
+                            <p class="card-text">Integrante del equipo de LUDUS, enfocada en el desarrollo de funcionalidades y construcción de la plataforma.</p>
                         </div>
                     </div>
                 </div>
@@ -172,8 +158,7 @@
                 <!-- Dante Escamilla Alcántara -->
                 <div class="col">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
-                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo"
-                            alt="Dante">
+                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo" alt="Dante">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-center gap-3 mb-3">
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
@@ -181,26 +166,23 @@
                             </div>
                             <h3 class="card-title text-center">Dante Escamilla Alcántara</h3>
                             <p class="text-center text-body-secondary">Desarrollador Full Stack</p>
-                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de
-                                funcionalidades y construcción de la plataforma.</p>
+                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de funcionalidades y construcción de la plataforma.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Ernesto Sanchez Salazar -->
+                <!-- Ernesto Sánchez Salazar -->
                 <div class="col">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
-                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo"
-                            alt="Dante">
+                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo" alt="Ernesto">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-center gap-3 mb-3">
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                                 <a href="#"><i class="bi bi-github"></i></a>
                             </div>
-                            <h3 class="card-title text-center">Ernesto Sanchez Salazar</h3>
+                            <h3 class="card-title text-center">Ernesto Sánchez Salazar</h3>
                             <p class="text-center text-body-secondary">Desarrollador Full Stack</p>
-                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de
-                                funcionalidades y construcción de la plataforma.</p>
+                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de funcionalidades y construcción de la plataforma.</p>
                         </div>
                     </div>
                 </div>
@@ -208,8 +190,7 @@
                 <!-- Ulises Abraham Ortíz Sánchez -->
                 <div class="col">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
-                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo"
-                            alt="Dante">
+                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo" alt="Ulises">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-center gap-3 mb-3">
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
@@ -217,8 +198,7 @@
                             </div>
                             <h3 class="card-title text-center">Ulises Abraham Ortíz Sánchez</h3>
                             <p class="text-center text-body-secondary">Desarrollador Full Stack</p>
-                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de
-                                funcionalidades y construcción de la plataforma.</p>
+                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de funcionalidades y construcción de la plataforma.</p>
                         </div>
                     </div>
                 </div>
@@ -226,17 +206,15 @@
                 <!-- Mara Lizette Gonzalez Gándara -->
                 <div class="col">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
-                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo"
-                            alt="Dante">
+                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo" alt="Mara">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-center gap-3 mb-3">
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                                 <a href="#"><i class="bi bi-github"></i></a>
                             </div>
                             <h3 class="card-title text-center">Mara Lizette Gonzalez Gándara</h3>
-                            <p class="text-center text-body-secondary">Desarrollador Full Stack</p>
-                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de
-                                funcionalidades y construcción de la plataforma.</p>
+                            <p class="text-center text-body-secondary">Desarrolladora Full Stack</p>
+                            <p class="card-text">Integrante del equipo de LUDUS, enfocada en el desarrollo de funcionalidades y construcción de la plataforma.</p>
                         </div>
                     </div>
                 </div>
@@ -246,11 +224,10 @@
     </section>
 
     <!--Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-                <!--Script header.js-->
-    <script src="./JS/header.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--Scripts personalizados-->
+    <script src="./JS/header.js"></script>
+    <script src="./JS/theme.js"></script>
 </body>
 
 </html>
