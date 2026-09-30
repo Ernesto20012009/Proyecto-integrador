@@ -20,7 +20,7 @@
     }
 
     .csscustom .nav-link {
-      color: var(--bs-body-bg);
+      color: var(--bs-body-color);
       font-weight: 500;
       padding: 0.5rem 1rem !important;
     }
@@ -241,4 +241,19 @@ h1, h2, h3, h4, h5, h6, .form-label {
 
 #theme-toggle:hover {
   background-color: var(--bs-tertiary-bg) !important;
+}
+
+/* Tamaño uniforme para todos los enlaces del Navbar */
+.navbar-nav .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Estilo unificado para la pestaña activa */
+.navbar-nav .nav-link.active {
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+  border-radius: 6px;
 }
