@@ -1,35 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const navMenu = document.getElementById('nav-menu');
-  const navToggle = document.getElementById('nav-toggle');
+  // 1. Obtener los elementos del DOM necesarios
+  const navbarCollapseEl = document.getElementById('navbarContent');
+  const navLinks = document.querySelectorAll('#nav-menu .nav-link');
+  
+  // 2. Obtener la instancia del Collapse de Bootstrap creada por los data-attributes
+  const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapseEl, {
+    toggle: false
+  });
 
-  // Abrir y cerrar el menú móvil mediante el botón hamburguesa
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('show-menu');
-
-      // Cambia el ícono de hamburguesa a una "X" al abrir
-      const icon = navToggle.querySelector('i');
-      if (navMenu.classList.contains('show-menu')) {
-        icon.classList.remove('ri-menu-line');
-        icon.classList.add('ri-close-line');
-      } else {
-        icon.classList.remove('ri-close-line');
-        icon.classList.add('ri-menu-line');
-      }
-    });
-  }
-
-  // Cerrar el menú automáticamente al hacer clic en cualquier sección
-  const navLinks = document.querySelectorAll('.nav-link');
+  // 3. Cerrar automáticamente el menú móvil al hacer clic en un enlace
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('show-menu');
-      
-      const icon = navToggle.querySelector('i');
-      if (icon) {
-        icon.classList.remove('ri-close-line');
-        icon.classList.add('ri-menu-line');
+    link.addEventListener('click', (event) => {
+      // Cambiar la clase activa visualmente al hacer clic
+      navLinks.forEach(l => l.classList.remove('nav-link-active'));
+      event.currentTarget.classList.add('nav-link-active');
+
+      // Si la barra está desplegada en modo móvil, la cerramos
+      if (navbarCollapseEl.classList.contains('show')) {
+        bsCollapse.hide();
       }
     });
+  });
+
+  // 4. Detectar eventos de apertura y cierre
+  navbarCollapseEl.addEventListener('show.bs.collapse', () => {
+    console.log('El menú móvil se está abriendo');
+  });
+
+  navbarCollapseEl.addEventListener('hidden.bs.collapse', () => {
+    console.log('El menú móvil se ha cerrado');
   });
 });

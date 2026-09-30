@@ -16,12 +16,11 @@
 </head>
 
 <body>
-    <header class="header" id="header">
-        <nav class="navbar">
-            <a href="#">
-                 Ludus
-            </a>
+ <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg nav-custom border-bottom">
+    <div class="container-fluid px-lg-5">
 
+<<<<<<< Updated upstream
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
                     <a href="inicio.html" class="nav-link">Inicio</a>
@@ -39,11 +38,48 @@
                     <a href=“#miPerfil” class="nav-link">Mi perfil</a>
                 </li>
             </ul>
+=======
+      <!-- LOGO y título-->
+    <a class="navbar-brand d-flex align-items-center gap-2 brand-ludus" href="#">
+        <img src="IMAGE/logo.png" alt="Logo LUDUS" class="brand-logo-img">
+        <span>LUDUS</span>
+      </a>
 
-           <div class="nav-toggle" id="nav-toggle"> <i class="ri-menu-line"></i> 
-</div>
-        </nav>
-    </header>
+      <!-- BOTÓN RESPONSIVO PARA MÓVILES -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENÚ Y CATEGORÍAS -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-2 id="nav-menu">
+          <li class="nav-item">
+            <a href="#inicio" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#juegosDestacados" class="nav-link">Juegos Destacados</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contactanos" class="nav-link nav-link-active">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+            <a href="acercade.html" class="nav-link">Acerca de nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a href="#miPerfil" class="nav-link">Mi perfil</a>
+          </li>
+        </ul>
+
+        <!-- BOTÓN DERECHO INICIAR SESIÓN -->
+        <div class="d-flex mt-3 mt-lg-0">
+          <button class="btn btn-login " type="button">Iniciar sesión</button>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+>>>>>>> Stashed changes
+
 
     <!-- Breve explicación de qué es LUDUS -->
     <section id="que-es-ludus">
@@ -122,7 +158,7 @@
                 <!-- Alberto Benítez Anaya -->
                 <div class="col">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
-                        <img src="https://picsum.photos/seed/noticia6/600/350" class="card-img-top imagen-equipo"
+                        <img src="./IMAGE/fotosNosotros/albertano.heic" class="card-img-top imagen-equipo"
                             alt="Dante">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-center gap-3 mb-3">
@@ -131,8 +167,7 @@
                             </div>
                             <h3 class="card-title text-center">Alberto Benítez Anaya</h3>
                             <p class="text-center text-body-secondary">Desarrollador Full Stack</p>
-                            <p class="card-text">Integrante del equipo de LUDUS, enfocado en el desarrollo de
-                                funcionalidades y construcción de la plataforma.</p>
+                            <p class="card-text">Graduado de filosofía. Enfocado en la funcionalidad y diseño de la navegación del proyecto.  </p>
                         </div>
                     </div>
                 </div>
@@ -235,6 +270,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+                <!--Script header.js-->
+    <script src="./JS/header.js"> </script>
 </body>
 
 </html>
