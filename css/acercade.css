@@ -12,6 +12,24 @@
   object-fit: contain;
 }
 
+/* Por defecto: modo claro */
+.logo-dark {
+  display: none;
+}
+
+.logo-light {
+  display: block;
+}
+
+/* Modo oscuro de Bootstrap */
+[data-bs-theme="dark"] .logo-dark {
+  display: block;
+}
+
+[data-bs-theme="dark"] .logo-light {
+  display: none;
+}
+
 /* Navbar adaptable al modo claro / oscuro */
 .nav-custom {
   background-color: var(--bs-body-bg);
