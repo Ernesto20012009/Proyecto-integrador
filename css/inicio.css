@@ -1,0 +1,259 @@
+/*Barra de navegacion (NAVBAR)*/
+.brand-ludus {
+      color: #0099ff;
+      font-weight: 800;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 40px; /* Ajusta la altura de la imagen según tus necesidades */
+      width: auto;
+      object-fit: contain;
+    }
+
+    .css-custom {
+      background-color: var(--bs-body-bg);
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+    }
+
+    .csscustom .nav-link {
+      color: var(--bs-body-color);
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+    }
+
+    .nav-custom .nav-link:hover {
+      color: #0099ff;
+    }
+
+    /* Botón azul activo para Contáctanos */
+    .nav-custom .nav-link-active,
+    .nav-custom .nav-link-active {
+      background-color: #0099ff !important;
+      color: #ffffff !important;
+      border-radius: 6px;
+    }
+
+    /* Botón azul Iniciar sesión */
+    .btn-login {
+      background-color: #0099ff;
+      border-color: #0099ff;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 6px;
+      padding: 0.5rem 1.25rem;
+    }
+
+    .btn-login:hover {
+      background-color: #007acc;
+      border-color: #007acc;
+      color: #ffffff;
+    }
+
+    /*Estilo Reseñas
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+  */
+  /*ESTILOS GENERALES Y SECCION DE RESENIAS*/
+
+
+/*Fondo de la pagina*/
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bs-tertiary-bg); /*Fondo adaptable*/ 
+  color: var(--bs-tertiary-bg);
+  padding: 0px;
+  margin: 0px;
+}
+/* Todos los títulos y etiquetas de formularios */
+h1, h2, h3, h4, h5, h6, .form-label {
+  color: var(--bs-body-color) !important;
+}
+
+/* Contenedor principal: 4 columnas en 1 sola fila */
+.tarjetas-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 16px;                              
+  width: 100%;
+  max-width: 1100px;                      
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Estructura base de la tarjeta sin romper Bootstrap */
+.tarjetas-container .card {
+  background-color: var(--bs-body-bg); /* Adapta el fondo al modo claro u oscuro */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: none;
+}
+
+/* Cabecera de color superior */
+.card-header {
+  height: 60px;
+  position: relative;
+  border: none;
+}
+
+.header-red { background-color: #f78c80; }
+.header-pink { background-color: #f48fb1; }
+.header-purple { background-color: #ba68c8; }
+.header-teal { background-color: #4db6ac; }
+
+/* Avatares y fotos circulares superpuestos */
+.avatar, .avatar-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  border: 3px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.avatar-img {
+  object-fit: cover;
+}
+
+.header-red .avatar { background-color: #e53935; }
+.header-pink .avatar { background-color: #d81b60; }
+.header-purple .avatar { background-color: #8e24aa; }
+
+/* Contenido de la tarjeta */
+.tarjetas-container .card-body {
+  padding: 28px 16px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.top-tag {
+  font-size: 0.7rem;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.card-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 4px;
+}
+
+.tarjetas-container .card-title {
+  font-size: 0.78rem;
+  color: #666666;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.mutual-connections {
+  font-size: 0.78rem;
+  color: #0077b5;
+  margin-bottom: 16px;
+}
+
+.btn-invite {
+  background-color: transparent;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  color: #444444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-invite:hover {
+  background-color: #f5f5f5;
+  border-color: #999999;
+}
+
+/* Tarjetas de Juegos Destacados y Reseñas */
+.card {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+}
+
+.card-title, .card-name, .card-body, .card p, .card span {
+  color: var(--bs-body-color);
+}
+
+/* Subtítulos, géneros y plataformas en las tarjetas */
+.text-muted, .card .text-muted, .small {
+  color: var(--bs-secondary-color) !important;
+}
+
+/* Campos del Formulario de Contacto */
+.form-control {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+}
+
+.form-control:focus {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* Marcadores de posición (placeholders) */
+.form-control::placeholder {
+  color: var(--bs-secondary-color);
+  opacity: 0.7;
+}
+
+
+
+/* Corregir el menú desplegable móvil para que se adapte al modo oscuro */
+.navbar-collapse {
+  background-color: var(--bs-body-bg) !important;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Forzar que el botón de cambiar tema sea 100% visible siempre */
+#theme-toggle {
+  color: var(--bs-body-color) !important;
+  border-color: var(--bs-border-color) !important;
+  background-color: var(--bs-body-bg) !important;
+}
+
+#theme-toggle:hover {
+  background-color: var(--bs-tertiary-bg) !important;
+}
+
+/* Tamaño uniforme para todos los enlaces del Navbar */
+.navbar-nav .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Estilo unificado para la pestaña activa */
+.navbar-nav .nav-link.active {
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+}
